@@ -15,9 +15,9 @@ return [
     // 服务器地址
     'hostname'        => '47.92.210.30',
     // 数据库名
-    'database'        => 'wecaht',
+    'database'        => 'wechat',
     // 用户名
-    'username'        => 'wecaht',
+    'username'        => 'wechat',
     // 密码
     'password'        => '123456',
     // 端口

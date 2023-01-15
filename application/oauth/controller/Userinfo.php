@@ -18,11 +18,13 @@ class Userinfo extends Controller
        
         if (Session::get('openid')) {
             $openid=Session::get('openid');
-            $user=\app\common\model\Userinfos::where('openid',$openid)->find();
-            $this->assign('view',$user);
-            return $this->fetch('userinfo/oauthuserinfo');
-        } else {
-            return $this->redirect('http://wechat.mqz666.top/index.php/oauth/oauthcode?state=user');
+            if($user=\app\common\model\Userinfos::where('openid',$openid)->find()) {
+            
+                $this->assign('view',$user);
+                return $this->fetch('userinfo/oauthuserinfo');
+            }
+            else 
+                return $this->redirect('http://wechat.mqz666.top/index.php/oauth/oauthcode?state=user');
         }
 
     }

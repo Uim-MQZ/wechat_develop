@@ -48,10 +48,9 @@ class Oauthreturn extends Controller
             '&lang=zh_CN';
 
         $response = $wxcurl->get($oauth_info_api);
-
+        print_r($response);
         //解码json到PHP关联数组
         $info = json_decode($response,true);
-
         $view=[];
 
         //判断是否成功获取信息。失败则退出并提示错误信息
@@ -62,7 +61,7 @@ class Oauthreturn extends Controller
         }
         Session::set('openid',$info['openid']);
         Session::set('nickname',$info['nickname']);
-       $a=$this->save($info);
+        $a=$this->save($info);
 
         switch (input('get.state')){
             case 'user':
