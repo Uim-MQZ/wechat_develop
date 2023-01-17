@@ -240,4 +240,9 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+    
+    'wxconfig'               => [
+        'id'        => 'wxe0cf58bc89b77414',
+        'secret'    => '02d3663b8b2c3ab77fa80e6909949800',
+    ],
 ];

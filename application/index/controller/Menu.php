@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * user: lucky~丽
- * Date: 2017/11/22
- * Time: 9:23
- */
 
 namespace app\index\controller;
 use think\Controller;

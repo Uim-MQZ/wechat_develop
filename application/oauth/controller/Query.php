@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * user: lucky~丽
- * Date: 2017/12/7
- * Time: 14:57
- */
+
 
 namespace app\oauth\controller;
 

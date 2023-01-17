@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * user: lucky~丽
- * Date: 2017/12/7
- * Time: 10:09
- */
 
 namespace app\oauth\controller;
 
@@ -48,7 +42,6 @@ class Oauthreturn extends Controller
             '&lang=zh_CN';
 
         $response = $wxcurl->get($oauth_info_api);
-        print_r($response);
         //解码json到PHP关联数组
         $info = json_decode($response,true);
         $view=[];

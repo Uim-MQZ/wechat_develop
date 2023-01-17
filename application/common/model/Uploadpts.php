@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * user: lucky~丽
- * Date: 2017/11/22
- * Time: 19:10
- */
+
 
 namespace app\common\model;
 

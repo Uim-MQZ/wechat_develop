@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * user: lucky~丽
- * Date: 2017/11/22
- * Time: 14:35
- */
+
 namespace app\admin\controller;
 use app\common\model\Uploadpts;
 use think\Controller;
