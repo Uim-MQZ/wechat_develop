@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>分享按钮测试</title>
+</head>
+<body>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script type="text/javasccript">
+    var imgUrl = "https://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=asw&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&hd=undefined&latest=undefined&copyright=undefined&cs=3751892389,119408093&os=3951728523,3202890411&simid=3126242588,3817736539&pn=0&rn=1&di=7169026086108397569&ln=1375&fr=&fmq=1674122529559_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=1e&objurl=https%3A%2F%2Fwww.av199.com%2Fdata%2Fattachment%2Fforum%2F201401%2F04%2F141143vl5l54dolwh5l95j.jpg&rpstart=0&rpnum=0&adpicid=0&nojc=undefined&dyTabStr=MCwyLDMsNiw0LDEsNSw4LDcsOQ%3D%3D"; 
+    var link = "http://wechat.mqz666.top/index.php/oauth/userinfo";
+    var descContent = "test1";
+    var shareTitle = "test2";
+    wx.config({
+        debug: false, // 开启调试模
+        appId: '{$appId}', // 必填，公众号的唯一标识
+        timestamp: '{$timestamp}', // 必填，生成签名的时间戳
+        nonceStr: '{$nonceStr}', // 必填，生成签名的随机串
+        signature: '{$signature}',// 必填，签名，见附录1
+        jsApiList: ['onMenuShareTimeLine', 'onMenuShareAppMessage']
+    });
+    wx.ready(function () {
+        wx.onMenuShareTimeLine({
+            title: shareTitle,
+            link: link,
+            imgUrl: imgUrl,
+            success: function () {
+            },
+            cancel: function(){
+            }
+        });
+        wx.onMenuShareAppMessage({
+            title: shareTitle,
+            link: link,
+            desc: descContent,
+            imgUrl: imgUrl,
+            type: '',   // 分享类型,music、video或link，不填默认为link
+            dataUrl: '',    // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+            },
+            cancel: function () {
+            }
+        });
+    });
+</script>
+</body>
+</html>

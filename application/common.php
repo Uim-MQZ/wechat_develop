@@ -12,6 +12,7 @@
 // 应用公共文件
 //获取GET/POST数据，type:get/post
 //ind:数组索引；dval：默认值，没有此参数则返回默认值
+
 function request_data($type,$ind,$dval=''){
     $type=strtolower($type);
     if(empty($ind) || !is_string($ind)){
@@ -25,3 +26,4 @@ function request_data($type,$ind,$dval=''){
     }
     return $dval;
 }
+
